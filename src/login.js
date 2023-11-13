@@ -20,10 +20,6 @@ function Login() {
     }
   };
 
-
-
-
-
   const handleCadastrar = () => {
     navigate('/cadastro');
   };
