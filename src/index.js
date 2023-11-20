@@ -2,9 +2,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './login'; // Certifique-se de usar a letra maiúscula para corresponder ao nome do arquivo
-import Cadastro from './cadastro'; // Certifique-se de usar a letra maiúscula para corresponder ao nome do arquivo
-import MenuDeBusca from './menuDeBusca'; // Adicione a importação para o novo componente
+import Login from './login'; 
+import Cadastro from './cadastro'; 
+import MenuDeBusca from './MenuDeBusca'; 
 import reportWebVitals from './reportWebVitals';
 
 const rootElement = document.getElementById('root');
