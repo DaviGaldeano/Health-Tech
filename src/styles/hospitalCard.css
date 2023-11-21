@@ -1,0 +1,19 @@
+.hospital-card-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.hospital-card-details p {
+    margin-bottom: 5px;
+}
+
+.hospital-card-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+}
+
+.hospital-card-button button {
+    margin-left: auto;
+}

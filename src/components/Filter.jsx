@@ -3,11 +3,11 @@ import React from 'react';
 const Filter = ({ filter, setFilter }) => {
   return (
     <div className="filter">
-      <h2 className="login-title">Filtrar</h2>
+      <h2 className="login-title">Filtrar por especialidade</h2>
       <div className="filter-options">
         <div className="filter-options-div">
-          <p>Especialidade</p>
           <select
+            className="select"
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
           >

@@ -2,10 +2,11 @@ import PropTypes from 'prop-types';
 
 const Search = ({search, setSearch}) => {
     return (
-        <div className="search">
+        <div className="">
             <input
                 type="text"
-                placeholder="Digite para pesquisar"
+                className="input-header"
+                placeholder="Busca por hospitais ..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
             />

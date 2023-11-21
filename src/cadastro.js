@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './cadastro.css';
-import Menu from './menu';
+import './styles/cadastro.css';
 import logoMinisterio from './images/logoMinisterio.png';
 import logoEquipeMedica from './images/logoEquipeMedica.png';
 
@@ -29,7 +28,6 @@ function Cadastro() {
 
   return (
     <div className="Cadastro">
-      <Menu />
       <img src={logoMinisterio} className='logo-ministerio' alt="Logo do Ministério da Saúde"/>
       <div className='login-container'>
         <h3>Saúde com informação</h3>
