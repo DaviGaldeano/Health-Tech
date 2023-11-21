@@ -1,8 +1,7 @@
 // Login.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Menu from './menu';
-import './login.css';
+import './styles/login.css';
 import logoMinisterio from './images/logoMinisterio.png';
 import logoEquipeMedica from './images/logoEquipeMedica.png';
 
@@ -26,7 +25,6 @@ function Login() {
 
   return (
     <div className="Container">
-      <Menu />
       <div className="Content">
         <div className="Login">
           <img src={logoMinisterio} className='logo-ministerio' alt="Logo do Ministério da Saúde"/>

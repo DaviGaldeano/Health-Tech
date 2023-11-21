@@ -1,6 +1,6 @@
 // Menu.js
 import React, { useState } from 'react';
-import './menu.css';
+import './styles/menu.css';
 
 function Menu() {
   const [menuOpen, setMenuOpen] = useState(false);
