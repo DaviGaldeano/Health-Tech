@@ -1,25 +1,27 @@
+// FilterComponent.jsx
+
 import React from 'react';
+import '../styles/filter.css';  // Importando o arquivo CSS
 
-const Filter = ({ filter, setFilter }) => {
-  return (
-    <div className="filter">
-      <h2 className="login-title">Filtrar por especialidade</h2>
-      <div className="filter-options">
-        <div className="filter-options-div">
-          <select
-            className="select"
-            value={filter}
-            onChange={(e) => setFilter(e.target.value)}
-          >
-            <option value="All">Todas as especialidades</option>
-            <option value="Cardiologia">Cardiologia</option>
-            <option value="Ortopedia">Ortopedia</option>
-            <option value="Pediatria">Pediatria</option>
-          </select>
-        </div>
-      </div>
-    </div>
-  );
-};
+class FilterComponent extends React.Component {
+    render() {
+        return (
+            <div className="filter-container">
+                <h2>Pesquisar por</h2>
+                <div className="checkbox-container">
+                    <label className="checkbox-item">
+                        <input type="checkbox" name="nomeHospital"/> Nome do hospital
+                    </label>
+                    <label className="checkbox-item">
+                        <input type="checkbox" name="especialidade"/> Especialidade
+                    </label>
+                    <label className="checkbox-item">
+                        <input type="checkbox" name="maisProximo"/> Mais próximo de mim
+                    </label>
+                </div>
+            </div>
+        );
+    }
+}
 
-export default Filter;
+export default FilterComponent;

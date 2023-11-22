@@ -11,7 +11,7 @@ body {
 .menuDeBusca {
   overflow-x: auto;
   max-width: 700px;
-  max-height: 700px;
+  height: 580px;
   margin: auto;
   background-color: #ffffff;
   padding: 20px 30px;
@@ -29,7 +29,7 @@ h2 {
 }
 
 p {
-  margin-bottom: 10px 0;
+  margin-bottom: 2px;
 }
 
 input {
@@ -92,12 +92,10 @@ button:hover {
 }
 
 .input-header {
-  width: 100%;
+  width: 700px;
   margin-bottom: 0px;
-  margin-left: 70px;
+  margin-left: 577px;
   border: 2px solid #97baff;
-  border-radius: 10px;
-  box-sizing: border-box;
 }
 
 .ver-mais {
@@ -109,11 +107,12 @@ button:hover {
 .filter,
 .search {
   margin-bottom: 20px;
-  padding-bottom: 20px;
 }
 
 .select {
-  width: 100%;
+  max-width: 700px;
+  max-height: 700px;
+  margin-left: 810px;
   padding: 12px;
   margin-bottom: 16px;
   border: 2px solid #97baff;
@@ -139,6 +138,27 @@ button:hover {
 .logo-assistencia {
   display: flex;
   height: 200px;
+}
+
+.logo-sus {
+  display: flex;
+  max-width: 700px;
+  max-height: 700px;
+  margin: auto;
+}
+
+.medico {
+  display: flex;
+  height: 595px;
+  margin-top: -580px;
+}
+
+.medica {
+  display: flex;
+  height: 590px;
+  margin-left: 1600px;
+  margin-top: -600px;
+  width: 210px;
 }
 
 .header-menu {
