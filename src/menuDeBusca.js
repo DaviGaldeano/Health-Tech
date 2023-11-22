@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import './styles/menuDeBusca.css';
-import Navbar from './components/NavBar';
 import Filter from './components/Filter';
 import HospitalCard from './components/HospitalCard';
 import { getHospitais } from './hospitalUtils';
+import LogoSus from './images/logoSus.jpeg';
+import Medico from './images/medico.jpeg';
+import Medica from './images/medica.jpeg';
+import Search from './components/Search';
 
 function MenuDeBusca() {
   const [search, setSearch] = useState('');
@@ -16,11 +19,14 @@ function MenuDeBusca() {
     setHospitais(newHospitais);
   };
 
-  const renderHospitalCards = () => {
+    const renderHospitalCards = () => {
     return hospitais
       .filter((hospital) => {
-        // Lógica de filtragem por especialidade aqui
-        return true; // Altere conforme sua lógica
+        if (filter === 'All') {
+          return true;
+        } else {
+          return hospital.especialidade === filter;
+        }
       })
       .filter((hospital) =>
         hospital.nome.toLowerCase().includes(search.toLowerCase())
@@ -35,13 +41,24 @@ function MenuDeBusca() {
   };
 
   return (
-    <div>
-      <Navbar setSearch={setSearch} />
-      <div className='menuDeBusca'>
-        <Filter filter={filter} setFilter={setFilter} />
-        <div className='hospital-list'>{renderHospitalCards()}</div>
-      </div>
-    </div>
+    <>
+        <div>
+            <img src={LogoSus} className='logo-sus' alt="Logo do SUS"/>
+          <div>
+              <Filter filter={filter} setFilter={setFilter} />
+          </div>
+        </div>
+        <Search search={search} className='search' setSearch={setSearch} />
+        <div className='menuDeBusca'>
+          <div className='hospital-list'>{renderHospitalCards()}</div>
+        </div>
+        <div>
+          <img src={Medico} className='medico' alt="Medico"/>
+        </div>
+        <div>
+          <img src={Medica} className='medica' alt="Medica"/>
+        </div>
+    </>
   );
 }
 
