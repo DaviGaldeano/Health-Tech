@@ -1,36 +1,45 @@
-// Seu arquivo utils.js
+import { fetchHospitais } from "./api";
 
-export const getHospitais = () => {
-  return [
-    {
-      nome: 'Hospital das Clínicas',
-      especialidade: 'Clínica Geral',
-      endereco: 'Av. Dr. Enéas de Carvalho Aguiar, 255',
-      tempoEstimadoEspera: 'algum valor aqui', 
-    },
-    {
-      nome: 'Hospital Sírio-Libanês',
-      especialidade: 'Cardiologia',
-      endereco: 'Rua Dona Adma Jafet, 115',
-      tempoEstimadoEspera: 'algum valor aqui',
-    },
-    {
-      nome: 'Hospital Albert Einstein',
-      especialidade: 'Neurologia',
-      endereco: 'Av. Albert Einstein, 627',
-      tempoEstimadoEspera: 'algum valor aqui',
-    },
-    {
-      nome: 'Hospital São Camilo - Pompéia',
-      especialidade: 'Ortopedia',
-      endereco: 'Rua Jeroaquara, 45',
-      tempoEstimadoEspera: 'algum valor aqui',
-    },
-    {
-      nome: 'Hospital Santa Catarina',
-      especialidade: 'Oncologia',
-      endereco: 'Alameda Jaú, 1606',
-      tempoEstimadoEspera: 'algum valor aqui',
-    },
-  ];
+export const getHospitais = async (sortBy) => {
+  const randomDistance = () => Math.floor(Math.random() * 50) + 1 + " km";
+  const randomTempoEstimado = () => Math.floor(Math.random() * 10) + 1 + " min";
+
+  try {
+    const hospitaisData = await fetchHospitais();
+
+    const sortedHospitais = hospitaisData
+      .map((hospital) => {
+        const nome = hospital?.hospitalName;
+        const endereco = hospital?.hospitalEndereco;
+
+        return {
+          ...hospital,
+          tempoEstimadoEspera: randomTempoEstimado(),
+          distanciaAteMim: randomDistance(),
+          nome,
+          endereco,
+        };
+      })
+      .sort((a, b) => {
+        if (sortBy === "maisProximo") {
+          return a.distanciaAteMim.localeCompare(b.distanciaAteMim);
+        } else if (sortBy === "menorTempoEspera") {
+          return a.tempoEstimadoEspera.localeCompare(b.tempoEstimadoEspera);
+        } else {
+          return 0;
+        }
+      });
+
+    return sortedHospitais;
+  } catch (error) {
+    console.error("Erro ao obter hospitais:", error.message);
+    return [
+      {
+        nome: "Hospital das Clínicas",
+        endereco: "Av. Dr. Enéas de Carvalho Aguiar, 255",
+        tempoEstimadoEspera: randomTempoEstimado(),
+        distanciaAteMim: randomDistance(),
+      },
+    ];
+  }
 };

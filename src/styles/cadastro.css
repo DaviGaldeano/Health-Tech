@@ -1,59 +1,59 @@
 /* Cadastro.css */
 .Cadastro {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    font-family: 'Arial', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Arial", sans-serif;
 }
 
 .login-container {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    /* Adicione um espaçamento superior */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  /* Adicione um espaçamento superior */
 }
 
 .input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 16px;
-    border: 2px solid #97baff;
-    border-radius: 10px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 2px solid #97baff;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 
 .button-entrar {
-    background-color: #2d6ae2;
-    color: #ffffff;
-    padding: 10px 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    border: 2px solid #ffffff;
+  background-color: #2d6ae2;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border: 2px solid #ffffff;
 }
 
 .button-entrar:hover {
-    background-color: #1d4ec2;
+  background-color: #1d4ec2;
 }
 
 .login-title {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #97baff;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #97baff;
 }
 
 /* Estilos específicos para o formulário de cadastro dentro da classe .login-container */
 .Cadastro .login-container {
-    margin-top: 20px;
-    /* Adicione um espaçamento superior específico para o formulário de cadastro */
+  margin-top: 20px;
+  /* Adicione um espaçamento superior específico para o formulário de cadastro */
 }
 
 .Cadastro .login-title {
-    color: #1d4ec2;
-    /* Altere a cor do título para distingui-lo da tela de login */
+  color: #1d4ec2;
+  /* Altere a cor do título para distingui-lo da tela de login */
 }

@@ -1,19 +1,35 @@
 .hospital-card-details {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .hospital-card-details p {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .hospital-card-button {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex: 1;
+  display: flex;
+  background-color: white;
 }
 
 .hospital-card-button button {
-    margin-left: auto;
+  margin-left: auto;
+}
+
+.aberto {
+  margin-bottom: 100px;
+  color: rgb(0, 214, 0);
+}
+
+.row-buttons {
+  display: contents;
+}
+
+.row-informations {
+  width: 1000px;
+}
+
+.hospital-image {
+  max-width: 40px;
+  max-height: 40px;
 }

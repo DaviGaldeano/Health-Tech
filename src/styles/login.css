@@ -1,11 +1,11 @@
 .Login {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    font-family: 'Arial', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Arial", sans-serif;
 
   form {
     width: 300px;
@@ -20,18 +20,18 @@
     margin-bottom: 8px;
   }
 
-input {
-  width: 100%;
-  padding: 12px;
-  /* aumenta o tamanho do padding */
-  margin-bottom: 16px;
-  border: 2px solid #97baff;
-  /* define a largura e a cor da borda */
-  border-radius: 10px;
-  /* faz as bordas do input arredondadas */
-  box-sizing: border-box;
-  /* inclui o padding na largura total do input */
-}
+  input {
+    width: 100%;
+    padding: 12px;
+    /* aumenta o tamanho do padding */
+    margin-bottom: 16px;
+    border: 2px solid #97baff;
+    /* define a largura e a cor da borda */
+    border-radius: 10px;
+    /* faz as bordas do input arredondadas */
+    box-sizing: border-box;
+    /* inclui o padding na largura total do input */
+  }
 
   button {
     background-color: #97baff;
@@ -65,7 +65,7 @@ input {
   color: white;
 }
 
-.logo-ministerio{
+.logo-ministerio {
   width: 400px;
   height: auto;
   position: absolute;
@@ -73,7 +73,7 @@ input {
   right: 100px;
 }
 
-.logo-equipe-medica{
+.logo-equipe-medica {
   width: 250px;
 }
 
@@ -116,5 +116,5 @@ input {
 .login-title {
   text-align: center;
   margin-bottom: 20px;
-  color: #97baff; 
+  color: #97baff;
 }

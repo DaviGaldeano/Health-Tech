@@ -1,13 +1,13 @@
 // index.js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './login'; 
-import Cadastro from './cadastro'; 
-import MenuDeBusca from './menuDeBusca'; 
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Login from "./login";
+import Cadastro from "./cadastro";
+import MenuDeBusca from "./menuDeBusca";
+import reportWebVitals from "./reportWebVitals";
 
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById("root");
 
 ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
@@ -18,7 +18,7 @@ ReactDOM.createRoot(rootElement).render(
         <Route path="/menu-busca" element={<MenuDeBusca />} />
       </Routes>
     </Router>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
 
 reportWebVitals();

@@ -1,27 +1,43 @@
-// FilterComponent.jsx
+import React, { useState } from "react";
+import "../styles/filter.css";
 
-import React from 'react';
-import '../styles/filter.css';  // Importando o arquivo CSS
+const Filter = ({ handleSortChange }) => {
+  const [sortBy, setSortBy] = useState(null);
+  console.log(sortBy);
+  console.log(handleSortChange);
 
-class FilterComponent extends React.Component {
-    render() {
-        return (
-            <div className="filter-container">
-                <h2>Pesquisar por</h2>
-                <div className="checkbox-container">
-                    <label className="checkbox-item">
-                        <input type="checkbox" name="nomeHospital"/> Nome do hospital
-                    </label>
-                    <label className="checkbox-item">
-                        <input type="checkbox" name="especialidade"/> Especialidade
-                    </label>
-                    <label className="checkbox-item">
-                        <input type="checkbox" name="maisProximo"/> Mais próximo de mim
-                    </label>
-                </div>
-            </div>
-        );
-    }
-}
+  const handleCheckboxChange = (event) => {
+    const newSortBy = event.target.name === sortBy ? null : event.target.name;
+    setSortBy(newSortBy);
 
-export default FilterComponent;
+    handleSortChange(newSortBy);
+  };
+
+  return (
+    <div className="filter-container">
+      <h2>Pesquisar por:</h2>
+      <div className="checkbox-container">
+        <label className="checkbox-item">
+          <input
+            type="checkbox"
+            name="maisProximo"
+            checked={sortBy === "maisProximo"}
+            onChange={handleCheckboxChange}
+          />
+          Mais próximo de mim
+        </label>
+        <label className="checkbox-item">
+          <input
+            type="checkbox"
+            name="menorTempoEspera"
+            checked={sortBy === "menorTempoEspera"}
+            onChange={handleCheckboxChange}
+          />
+          Menor tempo de espera
+        </label>
+      </div>
+    </div>
+  );
+};
+
+export default Filter;
