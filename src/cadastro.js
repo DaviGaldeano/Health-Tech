@@ -1,42 +1,50 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './styles/cadastro.css';
-import logoMinisterio from './images/logoMinisterio.png';
-import logoEquipeMedica from './images/logoEquipeMedica.png';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./styles/cadastro.css";
+import logoMinisterio from "./images/logoMinisterio.png";
+import logoEquipeMedica from "./images/logoEquipeMedica.png";
 
 function Cadastro() {
-  const [name, setName] = useState('');
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const navigate = useNavigate();
 
   const handleCadastro = () => {
     // Simulação simples de validação e cadastro
     if (password !== confirmPassword) {
-      alert('As senhas não coincidem. Tente novamente.');
+      alert("As senhas não coincidem. Tente novamente.");
       return;
     }
 
-    navigate('/');
+    navigate("/");
   };
 
   const handleLogin = () => {
     // Redireciona para a página de login
-    navigate('/login');
+    navigate("/login");
   };
 
   return (
     <div className="Cadastro">
-      <img src={logoMinisterio} className='logo-ministerio' alt="Logo do Ministério da Saúde"/>
-      <div className='login-container'>
+      <img
+        src={logoMinisterio}
+        className="logo-ministerio"
+        alt="Logo do Ministério da Saúde"
+      />
+      <div className="login-container">
         <h3>Saúde com informação</h3>
-        <img src={logoEquipeMedica} className='logo-equipe-medica' alt="Equipe Médica"/>
-        <h2 className='login-title'>Novo Cadastro</h2>
+        <img
+          src={logoEquipeMedica}
+          className="logo-equipe-medica"
+          alt="Equipe Médica"
+        />
+        <h2 className="login-title">Novo Cadastro</h2>
         <form>
           <label>
             <input
-              className='input'
+              className="input"
               type="text"
               placeholder="Nome"
               value={name}
@@ -46,7 +54,7 @@ function Cadastro() {
           <br />
           <label>
             <input
-              className='input'
+              className="input"
               type="text"
               placeholder="Usuário"
               value={username}
@@ -57,7 +65,7 @@ function Cadastro() {
           <label>
             <input
               placeholder="Senha"
-              className='input'
+              className="input"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -67,18 +75,26 @@ function Cadastro() {
           <label>
             <input
               placeholder="Confirmar Senha"
-              className='input'
+              className="input"
               type="password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </label>
           <br />
-          <button type="button" className='button-entrar' onClick={handleCadastro}>
+          <button
+            type="button"
+            className="button-entrar"
+            onClick={handleCadastro}
+          >
             Cadastrar
           </button>
           <br />
-          <button type="button" className='button-cadastrar' onClick={handleLogin}>
+          <button
+            type="button"
+            className="button-cadastrar"
+            onClick={handleLogin}
+          >
             Voltar para login
           </button>
         </form>

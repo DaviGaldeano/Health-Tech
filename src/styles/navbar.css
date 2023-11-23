@@ -1,7 +1,7 @@
-@import 'bootstrap/dist/css/bootstrap.min.css';
+@import "bootstrap/dist/css/bootstrap.min.css";
 
 .navbar {
-    background-color: #c1d3f8;
+  background-color: #c1d3f8;
 }
 
 .navbar-header {
@@ -19,12 +19,12 @@
 }
 
 .button {
-  background-color : #97baff;
-    color: #ffffff;
-    padding: 10px 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 14px;
-    margin: 5px;
-    border: 2px solid #ffffff;
+  background-color: #97baff;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 5px;
+  border: 2px solid #ffffff;
 }
