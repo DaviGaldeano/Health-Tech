@@ -3,13 +3,10 @@ import "../styles/filter.css";
 
 const Filter = ({ handleSortChange }) => {
   const [sortBy, setSortBy] = useState(null);
-  console.log(sortBy);
-  console.log(handleSortChange);
 
   const handleCheckboxChange = (event) => {
     const newSortBy = event.target.name === sortBy ? null : event.target.name;
     setSortBy(newSortBy);
-
     handleSortChange(newSortBy);
   };
 
@@ -24,7 +21,7 @@ const Filter = ({ handleSortChange }) => {
             checked={sortBy === "maisProximo"}
             onChange={handleCheckboxChange}
           />
-          Mais próximo de mim
+          <span className="labelText">Mais próximo de mim</span>
         </label>
         <label className="checkbox-item">
           <input
@@ -33,7 +30,7 @@ const Filter = ({ handleSortChange }) => {
             checked={sortBy === "menorTempoEspera"}
             onChange={handleCheckboxChange}
           />
-          Menor tempo de espera
+          <span className="labelText">Menos pessoas na fila</span>
         </label>
       </div>
     </div>

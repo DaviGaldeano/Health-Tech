@@ -6,13 +6,12 @@ import logoEquipeMedica from "./images/logoEquipeMedica.png";
 
 function Cadastro() {
   const [name, setName] = useState("");
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const navigate = useNavigate();
 
   const handleCadastro = () => {
-    // Simulação simples de validação e cadastro
     if (password !== confirmPassword) {
       alert("As senhas não coincidem. Tente novamente.");
       return;
@@ -22,8 +21,7 @@ function Cadastro() {
   };
 
   const handleLogin = () => {
-    // Redireciona para a página de login
-    navigate("/login");
+    navigate("/");
   };
 
   return (
@@ -57,8 +55,8 @@ function Cadastro() {
               className="input"
               type="text"
               placeholder="Usuário"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </label>
           <br />

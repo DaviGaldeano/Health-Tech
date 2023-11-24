@@ -1,4 +1,3 @@
-// index.js
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -13,7 +12,7 @@ ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/menu-busca" element={<MenuDeBusca />} />
       </Routes>

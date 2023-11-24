@@ -1,4 +1,3 @@
-// Login.js
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./styles/login.css";
@@ -6,19 +5,17 @@ import logoMinisterio from "./images/logoMinisterio.png";
 import logoEquipeMedica from "./images/logoEquipeMedica.png";
 
 function Login() {
-  const [username, setUsername] = useState("");
+  const [email, setemail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    // Simplesmente continuar com o login se o usuário for 'davi' e a senha for '123'
-    if (username === "davi" && password === "123") {
+    if (email === "davi@gmail.com" && password === "123") {
       navigate("/menu-busca");
     } else {
       alert("Credenciais inválidas. Tente novamente.");
     }
   };
-
   const handleCadastrar = () => {
     navigate("/cadastro");
   };
@@ -46,8 +43,8 @@ function Login() {
                   className="input"
                   type="text"
                   placeholder="Usuário"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  value={email}
+                  onChange={(e) => setemail(e.target.value)}
                 />
               </label>
               <br />
